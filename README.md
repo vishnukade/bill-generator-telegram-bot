@@ -1,85 +1,51 @@
-# bill-generator-telegram-bot
-A Telegram bot that allows users to generate bills in PDF format using predefined templates. Users can choose between Bramhadev and Ganesh templates, fill out a Google Form, and receive the generated PDF directly in the chat.
-🚀 Telegram Bill Generator Bot
+# Telegram Bill Generator Bot
 
-A Telegram bot that allows users to generate bills in PDF format using predefined templates. Users can choose between Bramhadev and Ganesh templates, fill out a Google Form, and receive the generated PDF directly in the chat.
+## Overview
+This is a Telegram bot that helps generate billing PDFs based on user inputs. The bot interacts with users via Telegram, collects necessary billing details through a Google Form, and then generates a bill in PDF format.
 
-📌 Features
+## Features
+- Choose a billing template (Bramhadev or Ganesh)
+- Get a Google Form link to enter billing details
+- Automatically generate a PDF bill upon form submission
+- Sends the generated PDF directly to the user
 
-Supports multiple templates (Bramhadev & Ganesh)
+## Requirements
+Make sure you have the following dependencies installed:
+```
+python-telegram-bot
+python-docx
+nest-asyncio
+libreoffice
+```
 
-User-friendly input collection via Google Forms
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/telegram-bill-generator.git
+   cd telegram-bill-generator
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the bot:
+   ```bash
+   python main.py
+   ```
 
-Automatic generation of PDF invoices
+## Configuration
+- Replace `bot_token` in `main.py` with your Telegram bot token.
+- Update Google Form links in the bot's responses.
 
-Integration with LibreOffice or alternative cloud-based conversion
+## Deployment on PythonAnywhere
+1. Install LibreOffice:
+   ```bash
+   sudo apt install libreoffice
+   ```
+2. Set up a web app and configure the bot to run persistently.
 
-Sends the PDF invoice directly to the user
-
-🔧 Installation
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/yourusername/telegram-bill-generator.git
-cd telegram-bill-generator
-
-2️⃣ Install Required Dependencies
-
-pip install -r requirements.txt
-
-3️⃣ Set Up Your Telegram Bot
-
-Create a bot using BotFather
-
-Get the API token and replace it in main.py
-
-bot_token = "YOUR_TELEGRAM_BOT_TOKEN"
-
-4️⃣ (Optional) Set Up Google Drive API for DOCX to PDF Conversion
-
-If using Google Drive for DOCX to PDF conversion:
-
-Enable Google Drive API at Google Cloud Console
-
-Download credentials.json and place it in the project folder
-
-📜 Usage
-
-1️⃣ Start the Bot
-
-python main.py
-
-2️⃣ Interact with the Bot
-
-Send /start to begin.
-
-Select the template (Bramhadev or Ganesh).
-
-Receive a Google Form link and fill in your details.
-
-Upon form submission, the bot automatically generates the PDF and sends it back.
-
-⚙️ Technology Stack
-
-Python (Telegram Bot API, Google API)
-
-Google Forms & Google Drive API
-
-LibreOffice / CloudConvert API (DOCX to PDF conversion)
-
-📜 License
-
-This project is licensed under the MIT License. Feel free to modify and use it as needed.
-
-🙌 Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests.
-
-📞 Contact
-
-For any queries or support, reach out:
-
-Telegram: YourTelegramHandle
-
-Email: your.email@example.com
-
+## Usage
+- Start the bot using `/start` command.
+- Select a billing template.
+- Fill in the Google Form received.
+- Receive a PDF bill after submission.
